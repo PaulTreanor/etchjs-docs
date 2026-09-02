@@ -2,3 +2,4 @@
 - [Getting Started](getting-started.md)
 - [Components](components.md)
 - [API Reference](api.md)
+- [Live Demos](demos.md)

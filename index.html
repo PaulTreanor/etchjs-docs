@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Document</title>
+  <title>etchJS</title>
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@5/dist/themes/core.min.css">
@@ -10,15 +10,20 @@
 </head>
 <body>
   <div id="app"></div>
+  <!-- Demo mounting plugin -->
+  <script src="assets/docsify-demos.js"></script>
   <script>
     window.$docsify = {
-      name: 'Etch',
+      name: 'etchJS',
       repo: '',
       loadSidebar: true,
-      subMaxLevel: 2
+      subMaxLevel: 2,
+      plugins: [window.etchDemosPlugin]
     }
   </script>
   <!-- Docsify resource -->
   <script src="//cdn.jsdelivr.net/npm/docsify@5"></script>
+  <!-- Demo component bundle -->
+  <script type="module" src="/demos/register.js"></script>
 </body>
 </html>
