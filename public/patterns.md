@@ -6,7 +6,9 @@ There is a range of patterns to choose from
 
 ## Stipple
 
-```demo stipple
+Play with the density and colour to see the pattern update live.
+
+```demo stipple-playground
 ```
 
 ## Crosshatch

@@ -3,11 +3,13 @@ import { createRoot } from "react-dom/client";
 import StippleDemo from "./stipple.jsx";
 import CrosshatchDemo from "./crosshatch.jsx";
 import InteractiveDemo from "./interactive.jsx";
+import StipplePlayground from "./stipple-playground.jsx";
 
 const demos = {
   stipple: StippleDemo,
   crosshatch: CrosshatchDemo,
   interactive: InteractiveDemo,
+  "stipple-playground": StipplePlayground,
 };
 
 window.ETCH_DEMOS = demos;

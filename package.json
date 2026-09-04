@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@stianlarsen/react-code-preview": "^1.1.17",
     "etchjs": "^0.1.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
