@@ -1,5 +1,5 @@
 - [Home](README.md)
-- [Getting Started](getting-started.md)
-- [Components](components.md)
+- [Quick Start](quick-start.md)
+- [Patterns](patterns.md)
+- [Examples](examples.md)
 - [API Reference](api.md)
-- [Live Demos](demos.md)
