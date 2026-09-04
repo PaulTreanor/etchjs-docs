@@ -1,12 +1,18 @@
 import { useState } from "react";
 import { EtchFill } from "etchjs/react";
-import Demo from "./Demo.jsx";
+import Prism from "prismjs";
+import "prismjs/components/prism-clike";
+import "prismjs/components/prism-markup";
+import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-jsx";
 
 export default function StipplePlayground() {
-	const [density, setDensity] = useState(50);
+	const [density, setDensity] = useState(60);
 	const [color, setColor] = useState("#4dd0ff");
 
-	const code = `<EtchFill
+	const code = `import { EtchFill } from "etchjs/react";
+
+<EtchFill
   type="stipple"
   density={${density}}
   color="${color}"
@@ -14,8 +20,10 @@ export default function StipplePlayground() {
   Your content
 </EtchFill>`;
 
+	const highlighted = Prism.highlight(code, Prism.languages.jsx, "jsx");
+
 	return (
-		<Demo code={code}>
+		<div>
 			<div style={{ display: "flex", flexWrap: "wrap", gap: "24px" }}>
 				<label style={{ display: "grid", gap: "8px", fontSize: "14px" }}>
 					<span>
@@ -50,7 +58,7 @@ export default function StipplePlayground() {
 				color={color}
 				style={{
 					marginTop: "20px",
-					padding: "56px",
+					padding: "48px",
 					borderRadius: "12px",
 					textAlign: "center",
 					fontSize: "18px",
@@ -59,6 +67,13 @@ export default function StipplePlayground() {
 			>
 				Stipple preview
 			</EtchFill>
-		</Demo>
+
+			<pre data-lang="jsx" className="language-jsx" style={{ marginTop: "20px" }}>
+				<code
+					className="lang-jsx language-jsx"
+					dangerouslySetInnerHTML={{ __html: highlighted }}
+				/>
+			</pre>
+		</div>
 	);
 }
