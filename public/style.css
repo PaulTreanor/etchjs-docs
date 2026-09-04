@@ -1,0 +1,93 @@
+/*
+ * Custom styles for the etchJS docs site.
+ *
+ * docsify v5 is themed via CSS custom properties ("theme properties").
+ * Loads after the core + vue add-on stylesheets so it overrides them.
+ */
+
+:root {
+	/* ---------------------------------------------------------------
+	 * Color
+	 * --------------------------------------------------------------- */
+	--color-bg: #fff;
+	--color-text: #333;
+	--theme-color: #0b85d7;
+	--strong-color: color-mix(in srgb, var(--color-text), black 35%);
+
+	/* ---------------------------------------------------------------
+	 * Typography
+	 * --------------------------------------------------------------- */
+	--font-family: system-ui, sans-serif;
+	--font-family-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+	--font-family-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+		Consolas, "DejaVu Sans Mono", monospace;
+	--font-size: 16px;
+	--font-size-mono: 0.875rem;
+	--font-weight: 350;
+	--line-height: 1.6;
+	--modular-scale: 1.25;
+
+	/* ---------------------------------------------------------------
+	 * Content
+	 * --------------------------------------------------------------- */
+	--content-margin-inline: 45px;
+	--content-max-width: 72ch;
+	--scroll-padding-top: var(--margin-block);
+
+	/* ---------------------------------------------------------------
+	 * Sidebar
+	 * --------------------------------------------------------------- */
+	--sidebar-width: 280px;
+	--sidebar-bg: var(--color-bg);
+	--sidebar-name-color: var(--strong-color);
+	--sidebar-link-color: var(--color-text);
+	--sidebar-link-color-active: var(--theme-color);
+	--sidebar-group-title-color: var(--strong-color);
+
+	/* ---------------------------------------------------------------
+	 * Navbar
+	 * --------------------------------------------------------------- */
+	--navbar-height: 4em;
+	--navbar-link-color-active: var(--theme-color);
+
+	/* ---------------------------------------------------------------
+	 * Links
+	 * --------------------------------------------------------------- */
+	--link-color: ;
+	--link-color-hover: var(--theme-color);
+	--link-underline-color: var(--theme-color);
+	--link-underline-thickness: 2px;
+
+	/* ---------------------------------------------------------------
+	 * Code
+	 * --------------------------------------------------------------- */
+	--code-bg: var(--color-mono-1);
+	--code-color: ;
+	--codeblock-bg: var(--code-bg);
+	--codeblock-color: var(--code-color);
+	--codeblock-comment: #6e8090;
+	--codeblock-function: #dd4a68;
+	--codeblock-keyword: #07a;
+	--codeblock-property: #c08b30;
+	--codeblock-punctuation: #999;
+	--codeblock-tag: #905;
+
+	/* ---------------------------------------------------------------
+	 * Elements
+	 * --------------------------------------------------------------- */
+	--blockquote-border-color: var(--theme-color);
+	--button-bg: var(--theme-color);
+	--button-color: #fff;
+	--heading-color: var(--strong-color);
+	--heading-font-weight: 600;
+	--table-row-alt-bg: var(--color-mono-1);
+
+	/* ---------------------------------------------------------------
+	 * Common
+	 * --------------------------------------------------------------- */
+	--border-radius: 3px;
+	--duration-slow: 500ms;
+	--duration-medium: 250ms;
+	--duration-fast: 150ms;
+}
