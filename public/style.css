@@ -91,3 +91,65 @@
 	--duration-medium: 250ms;
 	--duration-fast: 150ms;
 }
+
+/* ---------------------------------------------------------------
+ * Sidebar toggle (mobile menu button)
+ * ---------------------------------------------------------------
+ * docsify v5 renders this as a tall, edge-hugging strip with three
+ * dots. Restyle it as a standard hamburger button.
+ */
+.sidebar-toggle {
+	width: 68px;
+	align-items: start;
+}
+
+.sidebar-toggle-button {
+	height: 44px;
+	width: 44px;
+	margin: 12px;
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius);
+	box-shadow: 0 1px 3px color-mix(in srgb, var(--color-text) 12%, transparent);
+}
+
+.sidebar-toggle-button span {
+	height: 2px;
+	width: 18px;
+	border-radius: 100vh;
+}
+
+.sidebar-toggle-button span:nth-child(2) {
+	margin-block: 4px;
+}
+
+/* On mobile, dock the toggle in a fixed top bar so it reads as a nav header. */
+@media screen and (max-width: 640px) {
+	.sidebar-toggle {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: auto;
+		width: auto;
+		height: var(--navbar-height);
+		align-items: center;
+		justify-content: flex-start;
+		background: var(--color-bg);
+		border-bottom: 1px solid var(--border-color);
+	}
+
+	body:has(.sidebar.show) .sidebar-toggle {
+		translate: 0;
+		width: auto;
+	}
+
+	.sidebar-toggle-button {
+		height: 36px;
+		width: 36px;
+		margin: 0 0 0 16px;
+	}
+
+	.markdown-section {
+		margin-top: calc(var(--navbar-height) + var(--content-margin-inline));
+	}
+}
