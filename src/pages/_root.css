@@ -1,0 +1,121 @@
+/*
+ * Global styles for the etchJS docs.
+ * Loaded automatically by Vocs from src/pages/_root.css.
+ */
+
+/* ---------------------------------------------------------------
+ * Stipple playground: live code preview
+ * --------------------------------------------------------------- */
+.etch-code {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  overflow: auto;
+  border: 1px solid var(--vocs-border-color-primary);
+  border-radius: 0.5rem;
+  background: var(--vocs-background-color-code-block);
+  color: var(--vocs-text-color-primary);
+  font-family: var(--vocs-font-family-mono);
+  font-size: var(--vocs-text-code-block);
+  line-height: var(--vocs-leading-code);
+  tab-size: 2;
+}
+
+.etch-code code {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+/* Prism token palette, matched to Vocs' Shiki themes
+ * (github-light / github-dark-dimmed). */
+:root {
+  --etch-code-comment: #6e7781;
+  --etch-code-keyword: #cf222e;
+  --etch-code-string: #0a3069;
+  --etch-code-function: #8250df;
+  --etch-code-number: #0550ae;
+  --etch-code-property: #116329;
+  --etch-code-tag: #0550ae;
+  --etch-code-punctuation: #57606a;
+  --etch-code-operator: #0550ae;
+  --etch-code-class: #953800;
+  --etch-code-variable: #24292f;
+}
+
+:root[style*='color-scheme:dark'],
+:root[style*='color-scheme: dark'] {
+  --etch-code-comment: #8b949e;
+  --etch-code-keyword: #f47067;
+  --etch-code-string: #96d0ff;
+  --etch-code-function: #dcbdfb;
+  --etch-code-number: #6cb6ff;
+  --etch-code-property: #8ddb8c;
+  --etch-code-tag: #8ddb8c;
+  --etch-code-punctuation: #adbac7;
+  --etch-code-operator: #6cb6ff;
+  --etch-code-class: #ffa657;
+  --etch-code-variable: #e6edf3;
+}
+
+.etch-code .token.comment,
+.etch-code .token.prolog,
+.etch-code .token.doctype,
+.etch-code .token.cdata {
+  color: var(--etch-code-comment);
+}
+
+.etch-code .token.punctuation {
+  color: var(--etch-code-punctuation);
+}
+
+.etch-code .token.property,
+.etch-code .token.constant,
+.etch-code .token.symbol,
+.etch-code .token.deleted {
+  color: var(--etch-code-property);
+}
+
+.etch-code .token.tag {
+  color: var(--etch-code-tag);
+}
+
+.etch-code .token.boolean,
+.etch-code .token.number {
+  color: var(--etch-code-number);
+}
+
+.etch-code .token.selector,
+.etch-code .token.attr-name,
+.etch-code .token.string,
+.etch-code .token.char,
+.etch-code .token.builtin,
+.etch-code .token.inserted {
+  color: var(--etch-code-string);
+}
+
+.etch-code .token.operator,
+.etch-code .token.entity,
+.etch-code .token.url {
+  color: var(--etch-code-operator);
+}
+
+.etch-code .token.atrule,
+.etch-code .token.attr-value,
+.etch-code .token.keyword {
+  color: var(--etch-code-keyword);
+}
+
+.etch-code .token.function {
+  color: var(--etch-code-function);
+}
+
+.etch-code .token.class-name {
+  color: var(--etch-code-class);
+}
+
+.etch-code .token.regex,
+.etch-code .token.important,
+.etch-code .token.variable {
+  color: var(--etch-code-variable);
+}

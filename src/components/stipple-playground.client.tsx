@@ -7,29 +7,30 @@ import 'prismjs/components/prism-clike'
 import 'prismjs/components/prism-markup'
 import 'prismjs/components/prism-javascript'
 import 'prismjs/components/prism-jsx'
-import 'prismjs/themes/prism-tomorrow.css'
 
 export function StipplePlayground() {
   const [density, setDensity] = useState(60)
   const [color, setColor] = useState('#4dd0ff')
 
-  const code = `import { EtchFill } from "etchjs/react";
-
-<EtchFill
-  type="stipple"
-  density={${density}}
-  color="${color}"
->
-  Your content
-</EtchFill>`
+  const code = [
+    'import { EtchFill } from "etchjs/react"',
+    '',
+    '<EtchFill',
+    '  type="stipple"',
+    `  density={${density}}`,
+    `  color="${color}"`,
+    '>',
+    '  Your content',
+    '</EtchFill>',
+  ].join('\n')
 
   const highlighted = Prism.highlight(code, Prism.languages.jsx, 'jsx')
 
   return (
-    <div>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '24px' }}>
-        <label style={{ display: 'grid', gap: '8px', fontSize: '14px' }}>
-          <span>
+    <div className="vocs:mt-4 vocs:space-y-4">
+      <div className="vocs:flex vocs:flex-wrap vocs:gap-6">
+        <label className="vocs:flex vocs:flex-col vocs:gap-2 vocs:text-sm">
+          <span className="vocs:text-secondary">
             Colour <code>{color}</code>
           </span>
           <input
@@ -41,19 +42,13 @@ export function StipplePlayground() {
               height: '36px',
               padding: '0',
               border: 'none',
+              borderRadius: '6px',
               cursor: 'pointer',
             }}
           />
         </label>
-        <label
-          style={{
-            display: 'grid',
-            gap: '8px',
-            fontSize: '14px',
-            flex: '1 1 180px',
-          }}
-        >
-          <span>
+        <label className="vocs:flex vocs:flex-col vocs:gap-2 vocs:text-sm vocs:flex-1 vocs:min-w-[180px]">
+          <span className="vocs:text-secondary">
             Density <code>{density}</code>
           </span>
           <input
@@ -63,6 +58,7 @@ export function StipplePlayground() {
             step="1"
             value={density}
             onChange={(event) => setDensity(Number(event.target.value))}
+            style={{ accentColor: 'var(--vocs-color-accent)' }}
           />
         </label>
       </div>
@@ -73,7 +69,6 @@ export function StipplePlayground() {
         density={density}
         color={color}
         style={{
-          marginTop: '20px',
           padding: '48px',
           borderRadius: '12px',
           textAlign: 'center',
@@ -84,17 +79,7 @@ export function StipplePlayground() {
         Stipple preview
       </EtchFill>
 
-      <pre
-        data-lang="jsx"
-        className="language-jsx"
-        style={{
-          marginTop: '20px',
-          padding: '16px',
-          borderRadius: '8px',
-          overflow: 'auto',
-          background: '#282c34',
-        }}
-      >
+      <pre data-lang="jsx" className="etch-code language-jsx">
         <code
           className="lang-jsx language-jsx"
           dangerouslySetInnerHTML={{ __html: highlighted }}
