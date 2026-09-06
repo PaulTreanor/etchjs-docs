@@ -1,5 +1,0 @@
-- [Home](README.md)
-- [Quick Start](quick-start.md)
-- [Patterns](patterns.md)
-- [Examples](examples.md)
-- [API Reference](api.md)

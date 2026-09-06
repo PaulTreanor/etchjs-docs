@@ -1,26 +1,23 @@
-# Etch
+# etchJS Docs
 
-> An awesome project.
+Documentation site for [etchJS](https://github.com/PaulTreanor/etchjs-docs), built with [Vocs](https://vocs.dev).
 
-## Overview
-
-Etch is a lightweight library for building user interfaces. This documentation site is powered by [docsify](https://docsify.js.org).
-
-## Quick Start
+## Development
 
 ```bash
-npm install etch
+npm install
+npm run dev
 ```
 
-```js
-import etch from 'etch'
+## Build
 
-const element = etch.dom('div', { class: 'hello' }, 'Hello world')
-document.body.appendChild(element)
+```bash
+npm run build
 ```
 
-## Features
+Output goes to `dist/public` (static site) and `dist/server` (SSR bundle). The GitHub Actions workflow builds and deploys `dist/public` to GitHub Pages.
 
-- Declarative component model
-- Automatic DOM updates
-- Tiny footprint
+## Notes
+
+- Requires Node.js `^20.19 || >=22.12` (Vocs / Vite 8 constraint).
+- Pages live in `src/pages` as MDX; interactive demos are client components in `src/components`.

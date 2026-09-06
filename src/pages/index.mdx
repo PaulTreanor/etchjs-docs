@@ -1,0 +1,49 @@
+---
+title: etchJS
+---
+
+import { HomePage } from 'vocs'
+
+<HomePage.Root>
+  <HomePage.Tagline>{"Colour DOM items with programmatic patterns"}</HomePage.Tagline>
+  <HomePage.Description>
+    {
+      'etchJS is a tiny, framework-friendly library that fills DOM elements with generated patterns, like stipple, straight from markup or React props.'
+    }
+  </HomePage.Description>
+  <HomePage.Buttons>
+    <HomePage.Button href="/quick-start" variant="accent">
+      Quick Start
+    </HomePage.Button>
+    <HomePage.Button href="/examples">Examples</HomePage.Button>
+  </HomePage.Buttons>
+  <HomePage.InstallPackage name="etchjs" />
+</HomePage.Root>
+
+## Overview
+
+etchJS adds programmatic patterns to your DOM elements. It's tiny, ships vanilla JS and
+React adapters, and generates every pattern client-side.
+
+## Quick Start
+
+```bash
+npm install etchjs
+```
+
+```html
+<div data-fill="stipple" data-fill-density="60" data-fill-color="#ff4d4d"></div>
+```
+
+## Features
+
+- Lightweight and dependency-free
+- Vanilla JS and React adapters
+- Client-side pattern generation, so it's SSR-safe
+- Interactive, live pattern controls
+
+## Next Steps
+
+- Read the [Quick Start](/quick-start) guide
+- Browse the [Examples](/examples)
+- Check out the [API Reference](/api)
